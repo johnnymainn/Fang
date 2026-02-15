@@ -7,6 +7,9 @@ export default function About() {
           Fang Dynamics
         </a>
         <nav className="flex gap-10">
+          <a href="/brands" className="text-sm font-medium tracking-widest uppercase text-white hover:text-primary transition-colors">
+            Brands
+          </a>
           <a href="/about" className="text-sm font-medium tracking-widest uppercase text-primary transition-colors">
             About
           </a>

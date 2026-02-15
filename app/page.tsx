@@ -73,6 +73,9 @@ export default function Home() {
             Fang Dynamics
           </a>
           <nav className="flex gap-10">
+            <a href="/brands" className="text-sm font-medium tracking-widest uppercase text-white hover:text-primary transition-colors">
+              Brands
+            </a>
             <a href="/about" className="text-sm font-medium tracking-widest uppercase text-white hover:text-primary transition-colors">
               About
             </a>
