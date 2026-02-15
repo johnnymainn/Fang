@@ -41,7 +41,7 @@ export default function Brands() {
             Brands We Work With
           </h1>
 
-          <p className="text-lg text-muted-foreground leading-relaxed text-center mb-16 max-w-2xl mx-auto">
+          <p className="text-xl text-white leading-relaxed text-center mb-16 max-w-2xl mx-auto">
             We partner exclusively with industry-leading manufacturers known for their
             engineering excellence and unwavering commitment to quality.
           </p>
@@ -57,7 +57,7 @@ export default function Brands() {
                   <h3 className="text-2xl font-bold uppercase tracking-tight mb-3 text-white group-hover:text-primary transition-colors">
                     {brand.name}
                   </h3>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wider">
+                  <p className="text-sm text-white uppercase tracking-wider">
                     {brand.specialty}
                   </p>
                 </div>
@@ -72,7 +72,7 @@ export default function Brands() {
             <h2 className="text-3xl font-bold uppercase tracking-tighter mb-6">
               Looking for a Specific Brand?
             </h2>
-            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+            <p className="text-lg text-white mb-8 max-w-xl mx-auto">
               If you're seeking parts from a brand not listed here, reach out to us.
               Our network extends beyond these trusted partners.
             </p>

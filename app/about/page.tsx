@@ -27,7 +27,7 @@ export default function About() {
           </h1>
 
           <div className="prose prose-invert max-w-none mb-16">
-            <p className="text-xl text-muted-foreground leading-relaxed text-center mb-16">
+            <p className="text-2xl text-white leading-relaxed text-center mb-16">
               We are dedicated to providing premium European vehicle parts through a curated,
               direct-to-consumer approach that prioritizes quality, authenticity, and personalized service.
             </p>
@@ -38,7 +38,7 @@ export default function About() {
               <h2 className="text-2xl font-semibold uppercase tracking-wide text-primary">
                 Trusted Quality
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-base text-white leading-relaxed">
                 We partner exclusively with premium, trusted brands known for their engineering excellence.
                 Every component meets our rigorous standards for performance and reliability. No compromises,
                 no substitutes—only the finest parts for discerning vehicle owners.
@@ -49,7 +49,7 @@ export default function About() {
               <h2 className="text-2xl font-semibold uppercase tracking-wide text-primary">
                 Bespoke Service
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-base text-white leading-relaxed">
                 All parts and services are available by inquiry only. This ensures personalized attention
                 to your specific vehicle requirements and guarantees authenticity. We take the time to understand
                 your needs and source exactly what your vehicle demands.
@@ -60,7 +60,7 @@ export default function About() {
               <h2 className="text-2xl font-semibold uppercase tracking-wide text-primary">
                 European Focus
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-base text-white leading-relaxed">
                 Specializing in premium European marques, we understand the unique demands of high-performance
                 vehicles. From German precision to Italian craftsmanship, we source parts that maintain
                 the exceptional standards these vehicles were built to uphold.
@@ -71,7 +71,7 @@ export default function About() {
               <h2 className="text-2xl font-semibold uppercase tracking-wide text-primary">
                 Direct Excellence
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-base text-white leading-relaxed">
                 Our direct-to-consumer model eliminates middlemen, ensuring competitive pricing without
                 compromising on the premium quality our clients expect. You get authentic parts at fair prices,
                 with the assurance that comes from dealing directly with specialists.
@@ -83,7 +83,7 @@ export default function About() {
             <h2 className="text-3xl font-bold uppercase tracking-tighter mb-8 text-center">
               Our Philosophy
             </h2>
-            <div className="space-y-6 text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            <div className="space-y-6 text-white leading-relaxed max-w-2xl mx-auto">
               <p>
                 At Fang Dynamics, we believe that maintaining a premium European vehicle requires more than
                 just parts—it demands expertise, authenticity, and an unwavering commitment to quality.

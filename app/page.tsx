@@ -97,7 +97,7 @@ export default function Home() {
 
           {/* Supporting content cluster - centered below title */}
           <div className="max-w-md text-center mb-8">
-            <p className="text-lg leading-relaxed text-muted-foreground mb-8">
+            <p className="text-xl leading-relaxed text-white mb-8">
               Premium European vehicle parts.
               Engineered for precision, curated for excellence.
             </p>
@@ -113,7 +113,7 @@ export default function Home() {
           {/* Bottom micro-elements */}
           <div className="absolute bottom-8 left-8">
             {/* Bottom-left status */}
-            <div className="text-xs uppercase tracking-widest text-muted-foreground">
+            <div className="text-sm uppercase tracking-widest text-white">
               Accepting inquiries
             </div>
           </div>
@@ -139,7 +139,7 @@ export default function Home() {
             Get in Touch
           </h2>
 
-          <p className="text-lg text-muted-foreground mb-12 leading-relaxed text-center">
+          <p className="text-xl text-white mb-12 leading-relaxed text-center">
             Ready to source premium parts for your European vehicle?
             Submit your inquiry below for a personalized consultation.
           </p>
@@ -160,7 +160,7 @@ export default function Home() {
                 id="email"
                 name="email"
                 required
-                className="w-full px-4 py-3 bg-background/30 border-2 border-gray-700 rounded-md text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                className="w-full px-4 py-3 bg-background/30 border-2 border-gray-700 rounded-md text-foreground placeholder:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all"
                 placeholder="your@email.com"
               />
             </div>
@@ -174,7 +174,7 @@ export default function Home() {
                 id="subject"
                 name="subject"
                 required
-                className="w-full px-4 py-3 bg-background/30 border-2 border-gray-700 rounded-md text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                className="w-full px-4 py-3 bg-background/30 border-2 border-gray-700 rounded-md text-foreground placeholder:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all"
                 placeholder="Parts inquiry for..."
               />
             </div>
@@ -188,7 +188,7 @@ export default function Home() {
                 name="message"
                 required
                 rows={6}
-                className="w-full px-4 py-3 bg-background/30 border-2 border-gray-700 rounded-md text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all resize-none"
+                className="w-full px-4 py-3 bg-background/30 border-2 border-gray-700 rounded-md text-foreground placeholder:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all resize-none"
                 placeholder="Please describe your vehicle and the parts you're looking for..."
               />
             </div>
@@ -212,7 +212,7 @@ export default function Home() {
 
             <div>
               <h3 className="text-sm uppercase tracking-widest text-primary mb-2">Hours</h3>
-              <p className="text-muted-foreground">
+              <p className="text-base text-white">
                 Monday - Friday: 9:00 AM - 6:00 PM EST<br />
                 Saturday: By Appointment Only
               </p>
@@ -220,7 +220,7 @@ export default function Home() {
           </div>
 
           <div className="mt-16 pt-8 border-t border-border text-center">
-            <p className="text-xs uppercase tracking-widest text-muted-foreground">
+            <p className="text-sm uppercase tracking-widest text-white">
               © 2026 Fang Dynamics. Premium European Vehicle Parts.
             </p>
           </div>
