@@ -8,6 +8,7 @@ export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [absoluteMousePosition, setAbsoluteMousePosition] = useState({ x: 0, y: 0 });
   const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -90,37 +91,71 @@ export default function Home() {
         </div>
 
         {/* Header */}
-        <header className="relative z-10 flex items-center justify-between px-8 py-6">
-          <a href="/" className="text-base font-medium tracking-wider uppercase text-white hover:text-primary transition-colors">
+        <header className="relative z-10 flex items-center justify-between px-4 md:px-8 py-6">
+          <a href="/" className="text-sm md:text-base font-medium tracking-wider uppercase text-white hover:text-primary transition-colors">
             Fang Dynamics
           </a>
 
-          {/* Logo in center
-          <div className="absolute left-1/2 -translate-x-1/2">
-            <Image
-              src="/FangLogo.png"
-              alt="Fang Dynamics Logo"
-              width={60}
-              height={60}
-              className="object-contain"
-            />
-          </div> */}
-
-          <nav className="flex gap-10">
-            <a href="/brands" className="text-sm font-medium tracking-widest uppercase text-white hover:text-primary transition-colors">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex gap-6 lg:gap-10">
+            <a href="/brands" className="text-xs lg:text-sm font-medium tracking-widest uppercase text-white hover:text-primary transition-colors">
               Brands
             </a>
-            <a href="/about" className="text-sm font-medium tracking-widest uppercase text-white hover:text-primary transition-colors">
+            <a href="/about" className="text-xs lg:text-sm font-medium tracking-widest uppercase text-white hover:text-primary transition-colors">
               About
             </a>
-            <a href="#contact" className="text-sm font-medium tracking-widest uppercase text-white hover:text-primary transition-colors">
-              Contact / Inquiries
+            <a href="#contact" className="text-xs lg:text-sm font-medium tracking-widest uppercase text-white hover:text-primary transition-colors">
+              Contact
             </a>
           </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden text-white hover:text-primary transition-colors p-2"
+            aria-label="Toggle menu"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {mobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="absolute top-full left-0 right-0 bg-black/95 backdrop-blur-sm border-t border-gray-800 md:hidden">
+              <nav className="flex flex-col p-4 space-y-4">
+                <a
+                  href="/brands"
+                  className="text-sm font-medium tracking-widest uppercase text-white hover:text-primary transition-colors py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Brands
+                </a>
+                <a
+                  href="/about"
+                  className="text-sm font-medium tracking-widest uppercase text-white hover:text-primary transition-colors py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  About
+                </a>
+                <a
+                  href="#contact"
+                  className="text-sm font-medium tracking-widest uppercase text-white hover:text-primary transition-colors py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Contact / Inquiries
+                </a>
+              </nav>
+            </div>
+          )}
         </header>
 
         {/* Main composition area */}
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-8 pb-20">
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 md:px-8 pb-20">
           {/* Logo and text - text positioned halfway down */}
           <div className="text-center mb-4 flex flex-col items-center gap-0">
             <Image
@@ -128,7 +163,7 @@ export default function Home() {
               alt="Fang Dynamics Logo"
               width={250}
               height={250}
-              className="object-contain max-w-[45vw] h-auto"
+              className="object-contain w-[40vw] md:w-auto md:max-w-[45vw] h-auto"
               priority
             />
             <Image
@@ -136,19 +171,19 @@ export default function Home() {
               alt="Fang Dynamics"
               width={765}
               height={255}
-              className="object-contain max-w-[80vw] h-auto"
+              className="object-contain w-[85vw] md:max-w-[80vw] h-auto"
             />
           </div>
 
           {/* Supporting content cluster - closer to logo */}
-          <div className="max-w-md text-center mb-8 mt-15">
-            <p className="text-xl leading-relaxed text-white mb-8 font-poppins">
+          <div className="max-w-md text-center mb-8 mt-4 md:mt-15 px-4">
+            <p className="text-base md:text-xl leading-relaxed text-white mb-6 md:mb-8 font-poppins">
               Premium European vehicle parts.
               Engineered for precision, curated for excellence.
             </p>
             <Button
               size="lg"
-              className="uppercase tracking-wider font-medium text-sm font-poppins hover:scale-105 transition-transform duration-200"
+              className="uppercase tracking-wider font-medium text-xs md:text-sm font-poppins hover:scale-105 transition-transform duration-200"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Submit Inquiry
@@ -156,18 +191,18 @@ export default function Home() {
           </div>
 
           {/* Bottom micro-elements */}
-          <div className="absolute bottom-8 left-8">
+          <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8">
             {/* Bottom-left status */}
-            <div className="text-sm uppercase tracking-widest text-white font-poppins">
+            <div className="text-xs md:text-sm uppercase tracking-widest text-white font-poppins">
               Accepting inquiries
             </div>
           </div>
         </div>
 
-        {/* Right-edge vertical tab - accent affordance */}
+        {/* Right-edge vertical tab - accent affordance (hidden on mobile) */}
         <button
           onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          className="fixed right-0 top-1/2 -translate-y-1/2 bg-primary text-primary-foreground px-4 py-6 text-xs uppercase tracking-widest font-medium hover:brightness-110 hover:scale-105 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background z-50 font-poppins"
+          className="hidden md:block fixed right-0 top-1/2 -translate-y-1/2 bg-primary text-primary-foreground px-4 py-6 text-xs uppercase tracking-widest font-medium hover:brightness-110 hover:scale-105 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background z-50 font-poppins"
           style={{ writingMode: 'vertical-rl' }}
         >
           Get Quote
@@ -176,13 +211,13 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="relative min-h-screen bg-black text-white py-24 px-8 flex items-center justify-center">
+      <section id="contact" className="relative min-h-screen bg-black text-white py-12 md:py-24 px-4 md:px-8 flex items-center justify-center">
         <div className="max-w-2xl mx-auto w-full">
-          <h2 className="text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-8 text-center font-poppins">
+          <h2 className="text-3xl md:text-5xl lg:text-7xl font-bold uppercase tracking-tighter mb-6 md:mb-8 text-center font-poppins">
             Get in Touch
           </h2>
 
-          <p className="text-xl text-white mb-12 leading-relaxed text-center font-poppins">
+          <p className="text-base md:text-xl text-white mb-8 md:mb-12 leading-relaxed text-center font-poppins">
             Ready to source premium parts for your European vehicle?
             Submit your inquiry below for a personalized consultation.
           </p>
@@ -258,23 +293,23 @@ export default function Home() {
 
           <div className="text-center space-y-6 mb-12">
             <div>
-              <h3 className="text-sm uppercase tracking-widest text-primary mb-2 font-poppins">Direct Email</h3>
-              <a href="mailto:fangdynamics@gmail.com" className="text-xl text-white hover:text-primary transition-colors font-poppins">
+              <h3 className="text-xs md:text-sm uppercase tracking-widest text-primary mb-2 font-poppins">Direct Email</h3>
+              <a href="mailto:fangdynamics@gmail.com" className="text-base md:text-xl text-white hover:text-primary transition-colors font-poppins break-all">
                 fangdynamics@gmail.com
               </a>
             </div>
 
             <div>
-              <h3 className="text-sm uppercase tracking-widest text-primary mb-2 font-poppins">Hours</h3>
-              <p className="text-base text-white font-poppins">
+              <h3 className="text-xs md:text-sm uppercase tracking-widest text-primary mb-2 font-poppins">Hours</h3>
+              <p className="text-sm md:text-base text-white font-poppins">
                 Monday - Friday: 9:00 AM - 6:00 PM EST<br />
                 Saturday: By Appointment Only
               </p>
             </div>
           </div>
 
-          <div className="mt-16 pt-8 border-t border-gray-700 text-center">
-            <p className="text-sm uppercase tracking-widest text-white font-poppins">
+          <div className="mt-8 md:mt-16 pt-6 md:pt-8 border-t border-gray-700 text-center">
+            <p className="text-xs md:text-sm uppercase tracking-widest text-white font-poppins">
               © 2026 Fang Dynamics. Premium European Vehicle Parts.
             </p>
           </div>
