@@ -99,7 +99,7 @@ export default function Home() {
         </div>
 
         {/* Header */}
-        <header className="relative z-10 flex items-center justify-between px-4 md:px-8 py-6">
+        <header className="relative z-50 flex items-center justify-between px-4 md:px-8 py-6">
           <a href="/" className="text-sm md:text-base font-medium tracking-wider uppercase text-white hover:text-primary transition-colors">
             Fang Dynamics
           </a>
@@ -171,7 +171,7 @@ export default function Home() {
               alt="Fang Dynamics Logo"
               width={250}
               height={250}
-              className="object-contain w-[40vw] md:w-auto md:max-w-[45vw] h-auto"
+              className="object-contain w-[40vw] md:w-[250px] md:max-w-[45vw] h-auto"
               priority
             />
             <Image
@@ -179,7 +179,7 @@ export default function Home() {
               alt="Fang Dynamics"
               width={765}
               height={255}
-              className="object-contain w-[85vw] md:max-w-[80vw] h-auto"
+              className="object-contain w-[85vw] md:w-auto md:max-w-[80vw] h-auto"
             />
           </div>
 

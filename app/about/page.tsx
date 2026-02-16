@@ -9,7 +9,7 @@ export default function About() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-gray-700 to-white">
       {/* Header */}
-      <header className="relative z-10 flex items-center justify-between px-4 md:px-8 py-6">
+      <header className="relative z-50 flex items-center justify-between px-4 md:px-8 py-6">
         <a href="/" className="text-sm md:text-base font-medium tracking-wider uppercase text-white hover:text-primary transition-colors">
           Fang Dynamics
         </a>
