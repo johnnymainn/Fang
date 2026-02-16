@@ -1,11 +1,25 @@
+import Image from "next/image";
+
 export default function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-gray-950 to-blue-950">
+    <div className="min-h-screen bg-gradient-to-b from-black via-gray-700 to-white">
       {/* Header */}
       <header className="relative z-10 flex items-center justify-between px-8 py-6">
         <a href="/" className="text-base font-medium tracking-wider uppercase text-white hover:text-primary transition-colors">
           Fang Dynamics
         </a>
+
+        {/* Logo in center */}
+        <div className="absolute left-1/2 -translate-x-1/2">
+          <Image
+            src="/FangLogo.png"
+            alt="Fang Dynamics Logo"
+            width={60}
+            height={60}
+            className="object-contain"
+          />
+        </div>
+
         <nav className="flex gap-10">
           <a href="/brands" className="text-sm font-medium tracking-widest uppercase text-white hover:text-primary transition-colors">
             Brands
@@ -22,7 +36,7 @@ export default function About() {
       {/* About Section */}
       <section className="relative text-foreground py-24 px-8">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-16 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold uppercase font-poppins tracking-tighter mb-16 text-center">
             About Fang Dynamics
           </h1>
 
@@ -35,18 +49,18 @@ export default function About() {
 
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div className="space-y-4">
-              <h2 className="text-2xl font-semibold uppercase tracking-wide text-primary">
+              <h2 className="text-2xl font-semibold uppercase font-poppins tracking-wide text-primary">
                 Trusted Quality
               </h2>
               <p className="text-base text-white leading-relaxed">
                 We partner exclusively with premium, trusted brands known for their engineering excellence.
                 Every component meets our rigorous standards for performance and reliability. No compromises,
-                no substitutes—only the finest parts for discerning vehicle owners.
+                no substitutes - only the finest parts for discerning vehicle owners.
               </p>
             </div>
 
             <div className="space-y-4">
-              <h2 className="text-2xl font-semibold uppercase tracking-wide text-primary">
+              <h2 className="text-2xl font-semibold uppercase font-poppins tracking-wide text-primary">
                 Bespoke Service
               </h2>
               <p className="text-base text-white leading-relaxed">
@@ -57,18 +71,18 @@ export default function About() {
             </div>
 
             <div className="space-y-4">
-              <h2 className="text-2xl font-semibold uppercase tracking-wide text-primary">
+              <h2 className="text-2xl font-semibold uppercase font-poppins tracking-wide text-primary">
                 European Focus
               </h2>
               <p className="text-base text-white leading-relaxed">
                 Specializing in premium European marques, we understand the unique demands of high-performance
-                vehicles. From German precision to Italian craftsmanship, we source parts that maintain
+                vehicles. From German precision to Japanese craftsmanship, we source parts that maintain
                 the exceptional standards these vehicles were built to uphold.
               </p>
             </div>
 
             <div className="space-y-4">
-              <h2 className="text-2xl font-semibold uppercase tracking-wide text-primary">
+              <h2 className="text-2xl font-semibold uppercase font-poppins tracking-wide text-primary">
                 Direct Excellence
               </h2>
               <p className="text-base text-white leading-relaxed">
@@ -80,13 +94,13 @@ export default function About() {
           </div>
 
           <div className="border-t border-border pt-12 mt-12">
-            <h2 className="text-3xl font-bold uppercase tracking-tighter mb-8 text-center">
+            <h2 className="text-3xl font-bold uppercase font-poppins tracking-tighter mb-8 text-center">
               Our Philosophy
             </h2>
             <div className="space-y-6 text-white leading-relaxed max-w-2xl mx-auto">
               <p>
                 At Fang Dynamics, we believe that maintaining a premium European vehicle requires more than
-                just parts—it demands expertise, authenticity, and an unwavering commitment to quality.
+                just parts - it demands expertise, authenticity, and an unwavering commitment to quality.
               </p>
               <p>
                 We've built our business on the principle that vehicle owners who invest in excellence
