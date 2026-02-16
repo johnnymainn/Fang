@@ -55,7 +55,7 @@ export default function About() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-black/95 backdrop-blur-sm border-t border-gray-800 md:hidden">
+          <div className="absolute top-full left-0 right-0 bg-black/95 backdrop-blur-sm border-t border-gray-800 md:hidden z-50">
             <nav className="flex flex-col p-4 space-y-4">
               <a
                 href="/brands"

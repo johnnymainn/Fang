@@ -46,15 +46,23 @@ export default function Home() {
         body: JSON.stringify(data),
       });
 
-      if (response.ok) {
+      console.log('Response status:', response.status);
+      console.log('Response ok:', response.ok);
+
+      const responseData = await response.json();
+      console.log('Response data:', responseData);
+
+      if (response.ok && responseData.success) {
         setFormStatus('success');
         e.currentTarget.reset();
         setTimeout(() => setFormStatus('idle'), 5000);
       } else {
+        console.error('Form submission failed:', responseData.error || 'Unknown error');
         setFormStatus('error');
         setTimeout(() => setFormStatus('idle'), 5000);
       }
     } catch (error) {
+      console.error('Form submission error:', error);
       setFormStatus('error');
       setTimeout(() => setFormStatus('idle'), 5000);
     }
@@ -126,7 +134,7 @@ export default function Home() {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="absolute top-full left-0 right-0 bg-black/95 backdrop-blur-sm border-t border-gray-800 md:hidden">
+            <div className="absolute top-full left-0 right-0 bg-black/95 backdrop-blur-sm border-t border-gray-800 md:hidden z-50">
               <nav className="flex flex-col p-4 space-y-4">
                 <a
                   href="/brands"
