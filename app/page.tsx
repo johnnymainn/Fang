@@ -291,12 +291,6 @@ export default function Home() {
                 Message sent successfully! We'll get back to you soon.
               </div>
             )}
-
-            {formStatus === 'error' && (
-              <div className="p-4 bg-red-900/50 border border-red-500 rounded-md text-white text-center font-poppins">
-                Failed to send message. Please try again or email us directly.
-              </div>
-            )}
           </form>
 
           <div className="text-center space-y-6 mb-12">
