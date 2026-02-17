@@ -186,7 +186,7 @@ export default function Home() {
           {/* Supporting content cluster - closer to logo */}
           <div className="max-w-md text-center mb-8 mt-4 md:mt-15 px-4">
             <p className="text-base md:text-xl leading-relaxed text-white mb-6 md:mb-8 font-poppins">
-              Premium European vehicle parts.
+              Premium European vehicle parts, tailored per client request.
               Engineered for precision, curated for excellence.
             </p>
             <Button
